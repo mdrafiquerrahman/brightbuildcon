@@ -625,7 +625,7 @@ body.menu-open {
 .founder-title { font-family: "DM Sans", sans-serif; font-size: 14px; color: #94a3b8; }
 
 /* ==========================================
-   WHAT WE OFFER SECTION (FIXED DESKTOP VIEW)
+   WHAT WE OFFER SECTION (DESKTOP MODE RESTORED)
    ========================================== */
 .services-section {
     background-color: #ffffff; 
@@ -685,7 +685,7 @@ body.menu-open {
 
 .services-grid-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* FIXED DESKTOP: Back to 2 columns layout */
+    grid-template-columns: repeat(2, 1fr); /* Restored perfect 2 columns layout on desktop */
     gap: 30px 40px; 
     width: 100%;                                   
 }
@@ -879,9 +879,9 @@ body.menu-open {
     object-fit: cover;            
 }
 
-/* ==========================================
-   OUR ACHIEVEMENTS / STATS SECTION (DESKTOP)
-   ========================================== */
+/* =========================================================================
+   OUR ACHIEVEMENTS / STATS SECTION (DESKTOP VIEW CRITERIA)
+   ========================================================================= */
 .achievements-section {
     display: flex;
     width: 100%;
@@ -913,6 +913,7 @@ body.menu-open {
     gap: 16px;
 }
 
+/* Hardlocked original specifications on desktop framework scale */
 .achievements-tagline {
     color: #847E8C;
     font-family: "Manrope", sans-serif;
@@ -985,7 +986,7 @@ body.menu-open {
 
 .achievements-heading.typing::after {
     content: "|";
-    color: #F47425;
+    color: #000000; /* RESET: Cursor is back to premium black */
     margin-left: 3px;
     animation: cursorBlink 0.7s infinite;
 }
@@ -1054,7 +1055,7 @@ body.menu-open {
     .expertise-header { text-align: center !important; margin-bottom: 76px !important; }
     .expertise-main-title { font-size: 48px !important; }
     
-    /* WHAT WE OFFER RESPONSIVE (TABLET) */
+    /* WHAT WE OFFER RESPONSIVE (TABLET LAYER) */
     .services-outer-wrapper { 
         display: flex !important; 
         height: auto !important;           
@@ -1072,7 +1073,7 @@ body.menu-open {
     .services-sub-heading { text-align: left !important; }
     .services-sub-heading-wrap { width: 100% !important; max-width: 527px !important; }
     
-    /* Converted grid track safely into single stacked column view */
+    /* Responsive safe column configurations */
     .services-grid-container { grid-template-columns: 1fr !important; gap: 32px !important; width: 100% !important; }
     .service-card { display: flex !important; padding: 24px !important; flex-direction: column-reverse !important; justify-content: center !important; align-items: center !important; flex: 1 0 0 !important; align-self: stretch !important; width: 100% !important; background-color: #ffffff; }
     .card-text-side { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; flex: 1 0 0 !important; align-self: stretch !important; width: 100% !important; max-width: 100% !important; text-align: left !important; }
@@ -1244,12 +1245,12 @@ body.menu-open {
     .expertise-main-title { font-size: 36px !important; letter-spacing: -0.5px; }
     .expertise-subtitle { font-size: 16px !important; }
 
-    /* WHAT WE OFFER RESPONSIVE (MOBILE) */
+    /* WHAT WE OFFER RESPONSIVE (MOBILE VIEW) */
     .services-outer-wrapper { 
         display: flex !important; 
         width: 100% !important; 
         height: auto !important;           
-        padding: 40px 24px !important; /* Uniform edge-safe spacing padding locked */
+        padding: 40px 24px !important; 
         flex-direction: column !important; 
         align-items: center !important; 
         gap: 32px !important; 
