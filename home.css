@@ -625,7 +625,7 @@ body.menu-open {
 .founder-title { font-family: "DM Sans", sans-serif; font-size: 14px; color: #94a3b8; }
 
 /* ==========================================
-   WHAT WE OFFER SECTION
+   WHAT WE OFFER SECTION (FIXED DESKTOP VIEW)
    ========================================== */
 .services-section {
     background-color: #ffffff; 
@@ -639,25 +639,110 @@ body.menu-open {
     display: flex;
     max-width: 1280px;     
     width: 100%;           
-    padding: 0 100px; 
+    padding: 100px 54px;   
     flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 24px;
-    flex-shrink: 0;
-    align-self: stretch;
-    max-width: 100%;
-    width: 100%;
+    align-items: stretch;  
+    gap: 54px;             
+    margin: 0 auto;        
 }
 
-.services-header-block { text-align: left; align-items: flex-start; }
-.services-main-heading { text-align: left; font-size: 44px; line-height: 48px; }
-.services-sub-heading { text-align: left; }
-.services-sub-heading-wrap { width: 100%; max-width: 527px; }
-.services-grid-container { grid-template-columns: 1fr; gap: 24px; width: 100%; }
-.service-card { display: flex; padding: 24px; flex-direction: column-reverse; justify-content: center; align-items: center; flex: 1 0 0; align-self: stretch; width: 100%; background-color: #ffffff; }
-.card-text-side { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; flex: 1 0 0; align-self: stretch; width: 100%; max-width: 100%; text-align: left; }
-.card-image-side { width: 100%; max-width: 552px; height: 280.83334px; border-radius: 8px; overflow: hidden; flex-shrink: 0; }
+.services-header-block {
+    text-align: left;      
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.services-main-heading {
+    color: #000000;              
+    font-family: "Outfit", sans-serif; 
+    font-size: 64px;             
+    font-style: normal;          
+    font-weight: 400;            
+    line-height: 53.46px;        
+    letter-spacing: -0.5px;
+    text-align: left;            
+}
+
+.services-sub-heading-wrap {
+    width: 527px;            
+    height: auto;            
+    display: block;
+}
+
+.services-sub-heading {
+    color: #000000;              
+    font-family: "DM Sans", sans-serif; 
+    font-size: 18px;             
+    font-style: normal;          
+    font-weight: 400;            
+    line-height: 21.6px;         
+    text-align: left;
+    width: 100%;
+    word-wrap: break-word;       
+}
+
+.services-grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* FIXED DESKTOP: Back to 2 columns layout */
+    gap: 30px 40px; 
+    width: 100%;                                   
+}
+
+.service-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
+    padding: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    width: 100%;                                   
+}
+
+.card-text-side {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 104px;              
+    flex: 1 1 auto;             
+}
+
+.card-title {
+    color: #F47425;                  
+    font-family: "Mulish", sans-serif; 
+    font-size: 24px;                 
+    font-style: normal;              
+    font-weight: 700;                
+    line-height: 26.319px;           
+}
+
+.card-paragraph {
+    color: #000000;                  
+    font-family: "DM Sans", sans-serif; 
+    font-size: 16px;                 
+    font-style: normal;              
+    font-weight: 400;                
+    line-height: 19.2px;             
+    align-self: stretch;             
+}
+
+.card-image-side {
+    width: 160px;
+    height: 240px; 
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 /* ==========================================
    WHY OUR CLIENTS TRUST BRIGHT BUILDCON STYLING
@@ -724,8 +809,6 @@ body.menu-open {
     font-style: normal;
     font-weight: 400;
     line-height: 29.25px;      
-    margin-top: 16px;          
-    margin-bottom: 60.75px;    
 }
 
 .trust-features-list {
@@ -796,9 +879,9 @@ body.menu-open {
     object-fit: cover;            
 }
 
-/* =========================================================================
-   OUR ACHIEVEMENTS / STATS SECTION (DESKTOP CRITERIA RESOLVED VERBATIM)
-   ========================================================================= */
+/* ==========================================
+   OUR ACHIEVEMENTS / STATS SECTION (DESKTOP)
+   ========================================== */
 .achievements-section {
     display: flex;
     width: 100%;
@@ -830,14 +913,13 @@ body.menu-open {
     gap: 16px;
 }
 
-/* Re-locked original user spec layout token criteria */
 .achievements-tagline {
     color: #847E8C;
     font-family: "Manrope", sans-serif;
     font-size: 22.5px;
     font-style: normal;
     font-weight: 600;
-    line-height: 100%; /* 22.5px */
+    line-height: 100%; 
     text-transform: uppercase;
     display: inline-block;
 }
@@ -972,15 +1054,15 @@ body.menu-open {
     .expertise-header { text-align: center !important; margin-bottom: 76px !important; }
     .expertise-main-title { font-size: 48px !important; }
     
+    /* WHAT WE OFFER RESPONSIVE (TABLET) */
     .services-outer-wrapper { 
         display: flex !important; 
         height: auto !important;           
-        padding: 0 100px !important; 
+        padding: 60px 44px !important; 
         flex-direction: column !important; 
         justify-content: center !important; 
         align-items: flex-start !important; 
-        gap: 24px !important; 
-        flex-shrink: 0 !important; 
+        gap: 40px !important; 
         align-self: stretch !important; 
         max-width: 100% !important; 
         width: 100% !important; 
@@ -989,10 +1071,12 @@ body.menu-open {
     .services-main-heading { text-align: left !important; font-size: 44px !important; line-height: 48px !important; }
     .services-sub-heading { text-align: left !important; }
     .services-sub-heading-wrap { width: 100% !important; max-width: 527px !important; }
-    .services-grid-container { grid-template-columns: 1fr !important; gap: 24px !important; width: 100% !important; }
+    
+    /* Converted grid track safely into single stacked column view */
+    .services-grid-container { grid-template-columns: 1fr !important; gap: 32px !important; width: 100% !important; }
     .service-card { display: flex !important; padding: 24px !important; flex-direction: column-reverse !important; justify-content: center !important; align-items: center !important; flex: 1 0 0 !important; align-self: stretch !important; width: 100% !important; background-color: #ffffff; }
     .card-text-side { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; flex: 1 0 0 !important; align-self: stretch !important; width: 100% !important; max-width: 100% !important; text-align: left !important; }
-    .card-image-side { width: 100% !important; max-width: 552px !important; height: 280.83334px !important; border-radius: 8px !important; overflow: hidden !important; flex-shrink: 0 !important; }
+    .card-image-side { width: 100% !important; max-width: 552px; height: 280px !important; border-radius: 8px !important; overflow: hidden !important; flex-shrink: 0 !important; }
 
     .trust-section { 
         height: auto; 
@@ -1053,7 +1137,7 @@ body.menu-open {
     }
 
     /* =========================================================================
-       FIXED TABLET ADAPTIVE OVERRIDES FOR ACHIEVEMENTS (image_ac39dc.png)
+       TABLET ADAPTIVE OVERRIDES FOR ACHIEVEMENTS (image_ac39dc.png)
        ========================================================================= */
     .achievements-section { 
         padding: 135px 44px;              
@@ -1083,7 +1167,6 @@ body.menu-open {
         width: 100%;
     }
 
-    /* Target specific custom style properties active only inside tablet bounds */
     .achievements-tagline {
         color: #F47425 !important;
         font-family: "DM Sans", sans-serif !important;
@@ -1161,41 +1244,40 @@ body.menu-open {
     .expertise-main-title { font-size: 36px !important; letter-spacing: -0.5px; }
     .expertise-subtitle { font-size: 16px !important; }
 
+    /* WHAT WE OFFER RESPONSIVE (MOBILE) */
     .services-outer-wrapper { 
         display: flex !important; 
         width: 100% !important; 
         height: auto !important;           
-        padding: 38px 16px !important; 
+        padding: 40px 24px !important; /* Uniform edge-safe spacing padding locked */
         flex-direction: column !important; 
         align-items: center !important; 
-        gap: 24px !important; 
+        gap: 32px !important; 
         margin: 0 auto !important; 
         background-color: #ffffff; 
         max-width: 100% !important; 
     }
-    .services-header-block { text-align: center !important; align-items: center !important; width: 100% !important; padding: 0 20px !important; }
+    .services-header-block { text-align: center !important; align-items: center !important; width: 100% !important; padding: 0 !important; }
     .services-main-heading { text-align: center !important; font-size: 34px !important; line-height: 42px !important; }
     .services-sub-heading-wrap { width: 100% !important; max-width: 100% !important; }
     .services-sub-heading { text-align: center !important; font-size: 16px !important; line-height: 22px !important; }
-    .services-grid-container { grid-template-columns: 1fr !important; gap: 24px !important; width: 100% !important; padding: 0 16px !important; }
-    .service-card { display: flex !important; padding: 24px !important; flex-direction: column-reverse !important; justify-content: center !important; align-items: center !important; flex: 1 0 0 !important; align-self: stretch !important; width: 100% !important; }
-    .card-text-side { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 24px !important; flex: 1 0 0 !important; align-self: stretch !important; width: 100% !important; max-width: 100% !important; text-align: left !important; }
-    .card-image-side { width: 100% !important; height: auto !important; aspect-ratio: 552 / 280.83334 !important; border-radius: 8px !important; overflow: hidden !important; }
+    .services-grid-container { grid-template-columns: 1fr !important; gap: 24px !important; width: 100% !important; padding: 0 !important; }
+    .service-card { display: flex !important; padding: 20px !important; flex-direction: column-reverse !important; justify-content: center !important; align-items: center !important; flex: 1 0 0 !important; align-self: stretch !important; width: 100% !important; }
+    .card-text-side { display: flex !important; flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; flex: 1 0 0 !important; align-self: stretch !important; width: 100% !important; max-width: 100% !important; text-align: left !important; }
+    .card-image-side { width: 100% !important; height: auto !important; aspect-ratio: 552 / 280 !important; border-radius: 8px !important; overflow: hidden !important; }
 
     .trust-section { padding: 60px 0; }
     .image-card-container { width: 100%; max-width: 345px; height: auto; aspect-ratio: 478.27 / 639; border-radius: 12px; }
 
-    /* =========================================================================
-       FIXED BUG LAYER: MOBILE RESPONSIVE SYNCHRONIZATION (image_a24138.png)
-       ========================================================================= */
+    /* ACHIEVEMENTS MOBILE VIEW SYNCHRONIZATION (image_a24138.png) */
     .achievements-section { 
-        padding: 60px 24px;               /* FIXED: Uniform mobile structural safety lock padding */
+        padding: 60px 24px;               
     }
     
     .achievements-title-block {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;          /* FIXED: Re-enforced rigid left-aligned constraints */
+        align-items: flex-start;          
         width: 100%;
     }
 
@@ -1206,7 +1288,7 @@ body.menu-open {
         font-style: normal !important;
         font-weight: 400 !important;
         line-height: 100% !important;
-        display: block;                   /* FIXED: Converted inline node layout level to force linear grid sync */
+        display: block;                   
         text-align: left;
         width: 100%;
         margin-bottom: 4px;
@@ -1214,7 +1296,7 @@ body.menu-open {
     
     .achievements-heading { 
         font-size: 32px; 
-        text-align: left;                 /* FIXED: Hard locked straight left line positioning rules */
+        text-align: left;                 
     }
     
     .achievements-description { 
