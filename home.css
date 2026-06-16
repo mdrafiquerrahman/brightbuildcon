@@ -144,6 +144,64 @@ body.menu-open {
     color: #F47425;
 }
 
+/* Dropdown Menu Base Styling */
+.dropdown-item {
+    position: relative;
+}
+
+.dropdown-arrow {
+    font-size: 12px;
+    margin-left: 6px;
+    transition: transform 0.3s ease;
+    vertical-align: middle;
+}
+
+.dropdown-item.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+@media (min-width: 1025px) {
+    .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%) translateY(15px);
+        background-color: #ffffff;
+        min-width: 200px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 12px 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: 1000;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .dropdown-item.active .dropdown-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(-50%) translateY(5px);
+    }
+
+    .dropdown-link {
+        display: block;
+        padding: 10px 24px;
+        color: #253139;
+        font-family: "DM Sans", sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        text-align: left;
+    }
+
+    .dropdown-link:hover {
+        background-color: #fcf1eb;
+        color: #F47425;
+        padding-left: 28px;
+    }
+}
+
 .cta-area {
     display: flex !important;
     align-items: center;
@@ -309,6 +367,7 @@ body.menu-open {
     display: flex;
     align-items: center;
     gap: 12px;
+    margin-bottom: 25px;
 }
 
 .jd-logo {
@@ -1129,8 +1188,8 @@ body.menu-open {
     border-radius: 16px;
     overflow: hidden;
     background-color: #E0E0E0;
-    width: calc((100% - 40px) / 3); 
-    min-width: 280px; 
+    width: calc((100% - 40px) / 3);
+    min-width: 280px;
     aspect-ratio: 4 / 3;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1147,6 +1206,7 @@ body.menu-open {
     object-fit: cover;
     display: block;
 }
+
 /* ==========================================
    TRUST SLIDER SECTION (DESIGN SPEC LOCK)
    ========================================== */
@@ -1169,7 +1229,8 @@ body.menu-open {
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
-    line-height: 52px; /* 108.333% */
+    line-height: 52px;
+    /* 108.333% */
     letter-spacing: -0.5px;
 }
 
@@ -1276,6 +1337,7 @@ body.menu-open {
     0% {
         transform: translate3d(0, 0, 0);
     }
+
     100% {
         transform: translate3d(-50%, 0, 0);
     }
@@ -1292,9 +1354,11 @@ body.menu-open {
     .trust-slider-section {
         padding: 40px 0;
     }
+
     .trust-header h2 {
         font-size: 32px;
     }
+
     .trust-card {
         flex: 0 0 320px;
         width: 320px;
@@ -1302,6 +1366,7 @@ body.menu-open {
         padding: 25px 20px;
         height: auto;
     }
+
     .client-feedback {
         font-size: 15px;
     }
@@ -1370,10 +1435,62 @@ body.menu-open {
         gap: 25px;
         transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         z-index: 1000;
+        overflow-y: auto;
     }
 
     .nav-menu.active {
         right: 0;
+    }
+
+    /* Mobile Dropdown Styling */
+    .dropdown-item {
+        width: 100%;
+        text-align: center;
+    }
+
+    .dropdown-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .dropdown-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color: #fdfdfd;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 0;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .dropdown-item.active .dropdown-menu {
+        max-height: 250px;
+        padding: 10px 0;
+        margin-top: 10px;
+    }
+
+    .dropdown-item.active .dropdown-arrow {
+        transform: rotate(180deg);
+    }
+
+    .dropdown-link {
+        display: block;
+        padding: 8px 20px;
+        color: #253139;
+        font-family: "DM Sans", sans-serif;
+        font-size: 16px;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        text-align: center;
+    }
+
+    .dropdown-link:hover {
+        color: #F47425;
     }
 
     .hero-panel-overlay {
@@ -1743,16 +1860,16 @@ body.menu-open {
        ========================================================================= */
     .design-projects-section {
         display: flex !important;
-        padding: 78px 20px !important;      
+        padding: 78px 20px !important;
         flex-direction: column !important;
         align-items: center !important;
-        gap: 56px !important;               
+        gap: 56px !important;
         flex: 1 0 0 !important;
         align-self: stretch !important;
     }
 
     .projects-outer-wrapper {
-        padding: 0 !important;             
+        padding: 0 !important;
         gap: 56px !important;
         width: 100% !important;
     }
@@ -1765,7 +1882,7 @@ body.menu-open {
         font-size: 16px !important;
         font-style: normal !important;
         font-weight: 600 !important;
-        line-height: 120% !important; 
+        line-height: 120% !important;
         letter-spacing: 2px !important;
         text-transform: capitalize !important;
     }
@@ -1778,7 +1895,7 @@ body.menu-open {
         font-size: 32px !important;
         font-style: normal !important;
         font-weight: 400 !important;
-        line-height: 110% !important; 
+        line-height: 110% !important;
         text-transform: capitalize !important;
     }
 
@@ -1789,10 +1906,11 @@ body.menu-open {
         font-size: 16px !important;
         font-style: normal !important;
         font-weight: 300 !important;
-        line-height: 22px !important; 
+        line-height: 22px !important;
         text-transform: capitalize !important;
         width: 375px !important;
-        max-width: 100% !important; /* Safety grid wrap override */
+        max-width: 100% !important;
+        /* Safety grid wrap override */
     }
 
     .projects-gallery-grid {
@@ -1800,9 +1918,9 @@ body.menu-open {
         padding: 10px 15px !important;
         gap: 20px !important;
     }
-    
+
     .project-image-card {
-        width: calc((100% - 20px) / 2) !important; 
+        width: calc((100% - 20px) / 2) !important;
     }
 }
 
@@ -2042,7 +2160,7 @@ body.menu-open {
         padding: 10px 0;
         gap: 20px !important;
     }
-    
+
     .project-image-card {
         width: 100% !important;
     }
@@ -2125,10 +2243,10 @@ body.menu-open {
 
 .certified-teams-card {
     width: 100%;
-    max-width: 580px;
+    max-width: 418px;
     background-color: #253038;
-    border-radius: 16px;
-    padding: 45px;
+    border-radius: 12px;
+    padding: 39px 30px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     color: #ffffff;
 }
@@ -2136,29 +2254,31 @@ body.menu-open {
 .certified-teams-card-title {
     font-family: "Outfit", sans-serif;
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 500;
+    line-height: normal;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 30px;
-    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    letter-spacing: 0px;
 }
 
 .certified-teams-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 8px;
 }
 
 .form-group-full {
     display: flex;
     flex-direction: column;
+    min-height: 50px;
     width: 100%;
     position: relative;
 }
 
 .form-group-row {
     display: flex;
-    gap: 20px;
+    gap: 8px;
     width: 100%;
 }
 
@@ -2166,6 +2286,7 @@ body.menu-open {
     display: flex;
     flex-direction: column;
     flex: 1;
+    min-height: 50px;
     position: relative;
 }
 
@@ -2174,7 +2295,7 @@ body.menu-open {
     width: 100%;
     background-color: #ffffff;
     border: 2px solid transparent;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 14px 18px;
     font-family: "DM Sans", sans-serif;
     font-size: 15px;
@@ -2192,12 +2313,14 @@ body.menu-open {
     width: 100%;
     background-color: #F47425;
     color: #ffffff;
+    max-height: 48px;
     border: none;
-    border-radius: 8px;
+    align-items: center;
+    border-radius: 5px;
     font-family: "Hind", sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    padding: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 8px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     letter-spacing: 0.5px;
@@ -2208,12 +2331,31 @@ body.menu-open {
     transform: translateY(-1px);
 }
 
+/* Form Validation Styles */
+.error-msg {
+    color: #ff5e5e;
+    font-size: 13px;
+    margin-top: 0;
+    display: block;
+    font-family: "DM Sans", sans-serif;
+    text-align: left;
+}
+
+.error-msg:not(:empty) {
+    margin-top: 5px;
+}
+
+.invalid-input {
+    border-color: #ff5e5e !important;
+    background-color: #fff8f8 !important;
+}
+
 .certified-teams-card-footer {
-    margin-top: 25px;
+    margin-top: 15px;
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 1px;
 }
 
 .support-text {
@@ -2240,8 +2382,10 @@ body.menu-open {
    ========================================== */
 .newsletter-band {
     background-color: #F47425;
-    padding: 50px 0;
+    height: 144px;
     width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .newsletter-band-grid {
@@ -2258,7 +2402,7 @@ body.menu-open {
 
 .newsletter-heading {
     font-family: "Outfit", sans-serif;
-    font-size: 32px;
+    font-size: 27.002px;
     font-weight: 700;
     color: #ffffff;
     line-height: 1.25;
@@ -2279,7 +2423,7 @@ body.menu-open {
     flex: 1;
     background-color: #ffffff;
     border: 2px solid transparent;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 14px 28px;
     font-family: "DM Sans", sans-serif;
     font-size: 16px;
@@ -2288,15 +2432,19 @@ body.menu-open {
     transition: border-color 0.3s;
 }
 
+.newsletter-form-inline input::placeholder {
+    color: #888888;
+}
+
 .newsletter-form-inline input:focus {
-    border-color: #253038;
+    border-color: #000000;
 }
 
 .btn-news-submit {
-    background-color: #253038;
+    background-color: #000000;
     color: #ffffff;
     border: none;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 14px 35px;
     font-family: "Outfit", sans-serif;
     font-size: 16px;
@@ -2307,7 +2455,7 @@ body.menu-open {
 }
 
 .btn-news-submit:hover {
-    background-color: #111111;
+    background-color: #222222;
     transform: translateY(-1px);
 }
 
@@ -2400,21 +2548,37 @@ body.menu-open {
 .footer-contacts-bar {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     gap: 30px;
     flex-wrap: wrap;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding: 35px 0;
 }
 
+.footer-left-contacts {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-divider {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 16px;
+}
+
+.footer-right-contacts {
+    display: flex;
+    align-items: center;
+}
+
 .footer-contact-item {
     display: flex;
     align-items: center;
     gap: 12px;
-    flex: 1 1 280px;
 }
 
 .footer-contact-item i {
-    color: #F47425;
+    color: rgba(255, 255, 255, 0.7);
     font-size: 20px;
     flex-shrink: 0;
 }
@@ -2464,8 +2628,27 @@ body.menu-open {
         align-items: stretch;
         gap: 40px;
     }
+
     .certified-teams-info {
         text-align: center;
+    }
+
+    .certified-teams-form-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .certified-teams-card {
+        padding: 35px 30px;
+        margin: 0 auto;
+    }
+
+    .certified-teams-form {
+        gap: 8px;
+    }
+
+    .certified-teams-card-footer {
+        margin-top: 20px;
     }
 }
 
@@ -2473,47 +2656,88 @@ body.menu-open {
     .certified-teams-section {
         padding: 60px 0;
     }
+
     .certified-teams-heading {
         font-size: 32px;
     }
-    .certified-teams-card {
-        padding: 30px 20px;
+
+    .certified-teams-card-title {
+        margin-bottom: 15px;
     }
+
+    .certified-teams-card {
+        padding: 25px 20px;
+    }
+
+    .certified-teams-form {
+        gap: 8px;
+    }
+
+    .certified-teams-card-footer {
+        margin-top: 15px;
+    }
+
     .form-group-row {
         flex-direction: column;
-        gap: 20px;
+        gap: 8px;
     }
+
     .newsletter-band {
+        height: auto;
         padding: 40px 0;
     }
+
     .newsletter-heading {
         font-size: 24px;
         text-align: center;
     }
+
     .newsletter-form-inline {
         flex-direction: column;
         gap: 15px;
     }
+
     .newsletter-form-inline input {
         border-radius: 8px;
     }
+
     .btn-news-submit {
         border-radius: 8px;
         width: 100%;
     }
+
     .footer-top-grid {
         flex-direction: column;
         gap: 15px;
     }
+
     .footer-brand-column,
     .footer-map-column {
         flex: none;
         width: 100%;
     }
+
     .footer-contacts-bar {
         flex-direction: column;
         gap: 20px;
+        align-items: flex-start;
     }
+
+    .footer-left-contacts {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .footer-divider {
+        display: none;
+    }
+
+    .footer-right-contacts {
+        width: 100%;
+    }
+
     .footer-contact-item {
         flex: none;
         width: 100%;
