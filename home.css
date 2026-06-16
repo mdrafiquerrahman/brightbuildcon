@@ -178,10 +178,16 @@ body.menu-open {
         border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
+    .dropdown-item:hover .dropdown-menu,
     .dropdown-item.active .dropdown-menu {
         opacity: 1;
         visibility: visible;
         transform: translateX(-50%) translateY(5px);
+    }
+
+    .dropdown-item:hover .dropdown-arrow,
+    .dropdown-item.active .dropdown-arrow {
+        transform: rotate(180deg);
     }
 
     .dropdown-link {
@@ -472,6 +478,7 @@ body.menu-open {
     overflow: hidden;
     position: relative;
     padding: 10px 0 0 0;
+    cursor: grab;
 }
 
 .expertise-ticker-track {
@@ -1244,6 +1251,7 @@ body.menu-open {
     margin: 0 auto;
     padding: 0;
     overflow: hidden;
+    cursor: grab;
 }
 
 /* Slider Engine */

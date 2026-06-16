@@ -12,6 +12,11 @@
     margin-top: 145px;
 }
 
+.interior-hero-section .video-overlay {
+    background: rgba(0, 0, 0, 0.75); /* Darker overlay for better text readability */
+    z-index: 2;
+}
+
 .interior-hero-section .container {
     height: 100%;
     display: flex;
@@ -303,5 +308,569 @@
     .interior-hero-buttons .btn-secondary-outline {
         max-width: 100%;
         width: 100%;
+    }
+}
+
+/* ==========================================
+   END-TO-END INTERIOR DESIGN SERVICE SECTION
+   ========================================== */
+.end-to-end-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .end-to-end-section {
+        padding: 60px 24px;
+    }
+}
+
+.end-to-end-container {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 50px;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+@media (max-width: 991px) {
+    .end-to-end-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+}
+
+/* Tabs Navigation styling */
+.tabs-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: none;
+    color: #253139;
+    font-family: "Outfit", sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    padding: 16px 24px;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    box-shadow: none;
+}
+
+.tab-btn.active {
+    background-color: #fcf1eb; /* Soft beige/peach matching theme */
+    color: #F47425;
+    font-weight: 700;
+    border: none;
+    box-shadow: none;
+}
+
+.tab-btn:hover:not(.active) {
+    background-color: rgba(244, 116, 37, 0.05);
+    color: #F47425;
+}
+
+/* Tab Content Display & Animation */
+.tab-content-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.tab-content {
+    display: none;
+    flex-direction: column;
+    animation: tabFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.tab-content.active {
+    display: flex;
+}
+
+@keyframes tabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image container */
+.tab-image-box {
+    width: 100%;
+    height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+    background-color: #eaeaea;
+}
+
+.tab-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tab-content:hover .tab-img {
+    transform: scale(1.02);
+}
+
+@media (max-width: 576px) {
+    .tab-image-box {
+        height: 220px;
+    }
+}
+
+/* Dark text overlay card */
+.tab-text-card {
+    background-color: #253038; /* Matches theme dark color */
+    color: #ffffff;
+    padding: 30px 35px;
+    border-radius: 14px;
+    margin-top: -40px;
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+    z-index: 5;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 576px) {
+    .tab-text-card {
+        margin-left: 15px;
+        margin-right: 15px;
+        padding: 20px 25px;
+    }
+}
+
+.tab-desc {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 22px;
+}
+
+@media (max-width: 576px) {
+    .tab-desc {
+        font-size: 14px;
+    }
+}
+
+.tab-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #F47425; /* Theme orange */
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tab-link i {
+    font-size: 14px;
+    transition: transform 0.3s ease;
+}
+
+.tab-link:hover {
+    color: #ffffff;
+}
+
+.tab-link:hover i {
+    transform: translateX(5px);
+}
+
+.text-full {
+    display: none;
+    animation: textFadeIn 0.3s ease forwards;
+}
+
+@keyframes textFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.expertise-main-title {
+    font-weight: 300;
+}
+
+/* ==========================================
+   COMPARISON SECTION STYLING
+   ========================================== */
+.comparison-section {
+    background-color: #22303a; /* Dark slate background from Bright Buildcon theme */
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+@media (max-width: 768px) {
+    .comparison-section {
+        padding: 60px 24px;
+    }
+}
+
+.comparison-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comparison-main-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 38px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.3;
+    letter-spacing: -0.5px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .comparison-main-title {
+        font-size: 28px;
+    }
+}
+
+.comparison-subtitle {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.6;
+}
+
+/* Three-column Grid Layout */
+.comparison-grid {
+    display: grid;
+    grid-template-columns: 1fr 320px 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 991px) {
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .comparison-center-image {
+        grid-row: 1; /* Place image on top for tablets/mobiles */
+        max-width: 320px;
+        margin: 0 auto;
+    }
+}
+
+/* Columns styling */
+.comparison-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-header-bar {
+    padding: 10px 15px;
+    text-align: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px; /* Ensures identical container sizes */
+    box-sizing: border-box;
+}
+
+.col-header-bar h3 {
+    font-family: "Outfit", sans-serif;
+    font-size: 14px; /* Reduced font size to fit text on a single line */
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    white-space: nowrap; /* Prevents text wrapping */
+}
+
+.comparison-positive .col-header-bar {
+    background-color: #F47425; /* Bright Buildcon Accent Orange */
+    color: #ffffff;
+}
+
+.comparison-negative .col-header-bar {
+    background-color: #4b5563; /* Muted Slate Gray for contrast */
+    color: #ffffff;
+}
+
+/* List Items styling */
+.comparison-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.comparison-list li {
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    text-align: center;
+}
+
+.comparison-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.comparison-list li strong {
+    display: block;
+    font-family: "Outfit", sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 6px;
+}
+
+.comparison-list li p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14.5px;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Center Image Column */
+.comparison-center-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.center-portrait-img {
+    width: 100%;
+    max-width: 300px;
+    height: 480px; /* Aligns with the full visual height of the surrounding lists */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ==========================================
+   CTA BANNER SECTION STYLING
+   ========================================== */
+.cta-banner-section {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    background-image: url('assests/images/cta_banner_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cta-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.75); /* Dark overlay to match theme and ensure text readability */
+    z-index: 1;
+}
+
+.cta-banner-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-banner-content {
+    max-width: 950px;
+    text-align: left;
+}
+
+.cta-banner-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 34px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.35;
+    margin-bottom: 15px;
+    letter-spacing: -0.5px;
+}
+
+@media (max-width: 768px) {
+    .cta-banner-title {
+        font-size: 24px;
+    }
+}
+
+.cta-banner-desc {
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+@media (max-width: 768px) {
+    .cta-banner-desc {
+        font-size: 14.5px;
+    }
+}
+
+/* Call to Action Button */
+.btn-cta-phone {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background-color: #F47425; /* Bright Buildcon orange brand color */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 15px rgba(244, 116, 37, 0.2);
+}
+
+.btn-cta-phone i {
+    font-size: 16px;
+}
+
+.btn-cta-phone:hover {
+    background-color: #d65d13;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   MOBILE & TABLET RESPONSIVE OVERRIDES
+   ========================================== */
+
+/* Hero Section Responsiveness (under 480px) */
+@media (max-width: 480px) {
+    .interior-hero-title {
+        font-size: 28px;
+    }
+    .interior-hero-desc {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .interior-hero-content {
+        gap: 15px;
+    }
+}
+
+/* End-to-End Services Tabs Responsiveness (under 768px) */
+@media (max-width: 768px) {
+    .tabs-navigation {
+        flex-direction: row;
+        overflow-x: auto;
+        white-space: nowrap;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;  /* IE/Edge */
+        gap: 12px;
+        padding: 5px 0 15px 0;
+        width: 100%;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .tabs-navigation::-webkit-scrollbar {
+        display: none; /* Chrome/Safari/Opera */
+    }
+    
+    .tab-btn {
+        white-space: nowrap;
+        flex: 0 0 auto;
+        width: auto;
+        padding: 12px 20px;
+        font-size: 15px;
+        text-align: center;
+        border-radius: 30px;
+    }
+}
+
+/* Comparison Section Responsiveness */
+@media (max-width: 991px) {
+    .center-portrait-img {
+        height: 340px;
+        max-width: 260px;
+        width: 100%;
+        border-width: 2px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .comparison-list {
+        gap: 15px;
+    }
+    .comparison-list li {
+        padding-bottom: 15px;
+    }
+    .comparison-list li strong {
+        font-size: 16px;
+    }
+    .comparison-list li p {
+        font-size: 13.5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .col-header-bar {
+        padding: 10px 12px;
+        min-height: auto;
+    }
+    
+    .col-header-bar h3 {
+        white-space: normal;
+        font-size: 13px;
+        line-height: 1.3;
+    }
+}
+
+/* CTA Banner Section Responsiveness (under 768px) */
+@media (max-width: 768px) {
+    .cta-banner-section {
+        padding: 60px 24px;
+    }
+    
+    .cta-banner-content {
+        text-align: center;
+        margin: 0 auto;
+    }
+    
+    .cta-banner-btn-wrapper {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .btn-cta-phone {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
     }
 }

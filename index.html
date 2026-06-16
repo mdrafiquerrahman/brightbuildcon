@@ -706,10 +706,12 @@
                 if (link.classList.contains('dropdown-toggle')) {
                     e.preventDefault();
                     e.stopPropagation();
-                    const item = link.closest('.dropdown-item');
-                    console.log('Toggling active class on dropdown-item, current classes:', item.className);
-                    item.classList.toggle('active');
-                    console.log('New dropdown-item classes:', item.className);
+                    if (window.innerWidth < 1025) {
+                        const item = link.closest('.dropdown-item');
+                        console.log('Toggling active class on dropdown-item, current classes:', item.className);
+                        item.classList.toggle('active');
+                        console.log('New dropdown-item classes:', item.className);
+                    }
                     return;
                 }
                 if (navMenu.classList.contains('active')) {
@@ -739,13 +741,127 @@
             });
         });
 
-        expertiseTicker.addEventListener('click', function (e) {
-            this.classList.toggle('js-scroller-paused');
-        });
+        // Setup draggable sliders for Expertise Ticker and Trust Slider
+        function makeTickerDraggable(container, track, durationMs) {
+            if (!container || !track) return;
 
-        expertiseTicker.addEventListener('mouseleave', function () {
-            this.classList.remove('js-scroller-paused');
-        });
+            // Remove CSS animation so we can control it via Web Animations API
+            track.style.animation = 'none';
+
+            let loopWidth = track.scrollWidth / 2;
+            
+            window.addEventListener('resize', () => {
+                loopWidth = track.scrollWidth / 2;
+                recreateAnimation();
+            });
+
+            let animation;
+            function recreateAnimation() {
+                const currentTime = animation ? animation.currentTime : 0;
+                if (animation) animation.cancel();
+                
+                animation = track.animate([
+                    { transform: 'translate3d(0, 0, 0)' },
+                    { transform: `translate3d(${-loopWidth}px, 0, 0)` }
+                ], {
+                    duration: durationMs,
+                    iterations: Infinity,
+                    easing: 'linear'
+                });
+                
+                if (currentTime) {
+                    animation.currentTime = currentTime % durationMs;
+                }
+            }
+
+            recreateAnimation();
+
+            let isDragging = false;
+            let startX = 0;
+            let startTranslationX = 0;
+            let hasMoved = false;
+
+            // Mouse hover pausing
+            container.addEventListener('mouseenter', () => {
+                if (!isDragging) {
+                    animation.pause();
+                }
+            });
+            container.addEventListener('mouseleave', () => {
+                if (!isDragging) {
+                    animation.play();
+                }
+            });
+
+            container.addEventListener('mousedown', (e) => {
+                if (e.button !== 0) return;
+                
+                isDragging = true;
+                hasMoved = false;
+                startX = e.clientX;
+                
+                animation.pause();
+                
+                const progress = (animation.currentTime % durationMs) / durationMs;
+                startTranslationX = -progress * loopWidth;
+                
+                container.style.cursor = 'grabbing';
+                track.style.pointerEvents = 'none';
+            });
+
+            window.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                
+                const dx = e.clientX - startX;
+                if (Math.abs(dx) > 5) {
+                    hasMoved = true;
+                }
+                
+                let newX = startTranslationX + dx;
+                
+                while (newX > 0) newX -= loopWidth;
+                while (newX < -loopWidth) newX += loopWidth;
+                
+                const newProgress = -newX / loopWidth;
+                animation.currentTime = newProgress * durationMs;
+            });
+
+            const endDrag = () => {
+                if (!isDragging) return;
+                isDragging = false;
+                
+                container.style.cursor = '';
+                track.style.pointerEvents = '';
+                
+                if (container.matches(':hover')) {
+                    animation.pause();
+                } else {
+                    animation.play();
+                }
+            };
+
+            window.addEventListener('mouseup', endDrag);
+            
+            container.addEventListener('click', (e) => {
+                if (hasMoved) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                }
+            }, true);
+        }
+
+        // Initialize drag-to-scroll on both tickers
+        makeTickerDraggable(
+            document.getElementById('expertiseTicker'), 
+            document.querySelector('#expertiseTicker .expertise-ticker-track'),
+            30000
+        );
+        
+        makeTickerDraggable(
+            document.querySelector('.trust-slider-container'),
+            document.querySelector('.trust-slider-container .trust-slider-track'),
+            35000
+        );
 
         document.getElementById('consultationForm').addEventListener('submit', function (e) {
             e.preventDefault();
