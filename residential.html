@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bright Buildcon - Home</title>
+    <title>Top Residential Construction Company In Bihar</title>
+    <meta name="description" content="Get premium residential construction and custom home interior design services in Bihar. Bright Buildcon delivers top-quality structural engineering and modern interiors.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +19,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="interior.css">
 </head>
 
 <body>
@@ -52,18 +54,18 @@
                     </div>
 
                     <nav class="nav-menu" id="navMenu">
-                        <a href="#" class="nav-link active">Home</a>
-                        <a href="#about-us" class="nav-link">About</a>
+                        <a href="index.html" class="nav-link">Home</a>
+                        <a href="index.html#about-us" class="nav-link">About</a>
                         <div class="dropdown-item">
-                            <a href="#" class="nav-link dropdown-toggle">Services <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
+                            <a href="#" class="nav-link dropdown-toggle active">Services <i class="fa-solid fa-chevron-down dropdown-arrow"></i></a>
                             <div class="dropdown-menu">
                                 <a href="interior.html" class="dropdown-link">Interior</a>
                                 <a href="renovation.html" class="dropdown-link">Renovation</a>
-                                <a href="residential.html" class="dropdown-link">Residential</a>
+                                <a href="residential.html" class="dropdown-link active">Residential</a>
                                 <a href="commercial.html" class="dropdown-link">Commercial</a>
                             </div>
                         </div>
-                        <a href="#" class="nav-link">Contact Us</a>
+                        <a href="index.html#consultationForm" class="nav-link">Contact Us</a>
                     </nav>
 
                     <div class="cta-area">
@@ -90,37 +92,250 @@
 
     <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <section class="hero-section">
+    <!-- Residential Hero Section -->
+    <section class="interior-hero-section">
         <video autoplay loop muted playsinline class="hero-video">
             <source src="assests/videos/hero.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="video-overlay"></div>
-
-        <div class="container hero-desktop-layout-wrap">
-            <div class="glass-card">
-                <h1 class="hero-title">Your Ultimate Hub for Construction and Custom Interior Design</h1>
-                <div class="rating-badge">
-                    <div class="jd-logo">Jd</div>
-                    <div class="rating-text-area">
-                        <a href="#" class="rating-link">5 Stars + 65 Ratings</a>
-                        <div class="stars">
-                            <span class="star fill">★</span>
-                            <span class="star fill">★</span>
-                            <span class="star fill">★</span>
-                            <span class="star fill">★</span>
-                            <span class="star half">★</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="cta-container">
-                    <a href="#" class="btn-primary">Start Your Project Today</a>
+        <div class="container">
+            <div class="interior-hero-content">
+                <span class="interior-tagline">BRIGHT BUILDCON RESIDENTIAL</span>
+                <h1 class="interior-hero-title residential-hero-title">Top Residential Construction Company In Bihar</h1>
+                <p class="interior-hero-desc">Bright Buildcon is a trusted home construction company in Bihar, known for its excellent craftsmanship and transparency. We build your dream home at an affordable cost.</p>
+                <ul class="interior-hero-bullets">
+                    <li><i class="fa-solid fa-circle-check"></i> Top Rated</li>
+                    <li><i class="fa-solid fa-circle-check"></i> No-1 Choice of home builders in Bihar</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Transparent & affordable house construction services</li>
+                </ul>
+                <div class="interior-hero-buttons">
+                    <a href="#consultationForm" class="btn-cert-submit">Contact Us</a>
+                    <a href="index.html#about-us" class="btn-secondary-outline">Know More</a>
                 </div>
             </div>
         </div>
-        <div class="hero-panel-overlay"></div>
     </section>
 
+    <!-- Request Free Consultation Section -->
+    <section class="consultation-section">
+        <div class="container">
+            <form class="consultation-form" id="consultationForm" novalidate>
+                <h2 class="form-title">Request A free Consultation</h2>
+                <div class="form-grid-layout">
+                    <div class="form-field">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" placeholder="Your Name">
+                        <span class="error-msg" id="nameError"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="emailAddress">Email</label>
+                        <input type="email" id="emailAddress" placeholder="Your Email">
+                        <span class="error-msg" id="emailError"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="phoneNumber">Phone</label>
+                        <input type="tel" id="phoneNumber" placeholder="Your Number">
+                        <span class="error-msg" id="phoneError"></span>
+                    </div>
+                    <div class="form-field">
+                        <label for="messageText">Message</label>
+                        <input type="text" id="messageText" placeholder="Additional message">
+                    </div>
+                </div>
+                <div class="form-submit-field">
+                    <button type="submit" class="btn-submit">Submit Now</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- End-to-End Residential Services Section -->
+    <section class="end-to-end-section">
+        <div class="container">
+            <div class="expertise-header" style="margin-bottom: 40px;">
+                <span class="interior-tagline">Services</span>
+                <h2 class="expertise-main-title" style="margin-top: 10px;">Residential Home Construction Services</h2>
+            </div>
+            
+            <div class="end-to-end-container">
+                <!-- Tabs Navigation List -->
+                <div class="tabs-navigation">
+                    <button class="tab-btn active" data-tab="building-construction">Building Construction</button>
+                    <button class="tab-btn" data-tab="house-renovation">House Renovation</button>
+                    <button class="tab-btn" data-tab="installations">Smart Installations</button>
+                    <button class="tab-btn" data-tab="exterior-work">Exterior & Landscaping</button>
+                    <button class="tab-btn" data-tab="maintenance-repairs">Maintenance & Repairs</button>
+                </div>
+                
+                <!-- Tab Panel Contents -->
+                <div class="tab-content-wrapper">
+                    <!-- Tab 1: Building Construction -->
+                    <div class="tab-content active" id="building-construction">
+                        <div class="tab-image-box">
+                            <img src="assests/images/project2.png" alt="End-to-End Building Construction Services in Bihar" class="tab-img">
+                        </div>
+                        <div class="tab-text-card">
+                            <p class="tab-desc">
+                                <span class="text-short">Build your dream home from scratch with our premier construction solutions. From soil testing and foundation laying to structural concrete and final brickwork, we manage everything...</span>
+                                <span class="text-full" style="display: none;"> Our certified engineering team utilizes grade-A concrete, high-tensile reinforcement steel, and premium building materials. We provide daily progress reports, ensuring that structural integrity, load-bearing capability, and layout design precisely match the plans.</span>
+                            </p>
+                            <a href="#" class="tab-link read-more-toggle">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 2: House Renovation -->
+                    <div class="tab-content" id="house-renovation">
+                        <div class="tab-image-box">
+                            <img src="assests/images/project1.png" alt="House Renovation and Remodeling Services" class="tab-img">
+                        </div>
+                        <div class="tab-text-card">
+                            <p class="tab-desc">
+                                <span class="text-short">Revitalize your home with high-end remodeling and aesthetic upgrades. We restructure spaces, change flooring, update paint schemes, and modernize your layout to match your lifestyle...</span>
+                                <span class="text-full" style="display: none;"> Whether you want structural modifications, partition walls removed, balcony expansions, or completely updated floor finishes, our skilled workers deliver clean craftsmanship, timely execution, and custom interior styling that enhances utility.</span>
+                            </p>
+                            <a href="#" class="tab-link read-more-toggle">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 3: Installations -->
+                    <div class="tab-content" id="installations">
+                        <div class="tab-image-box">
+                            <img src="assests/images/project3.png" alt="Plumbing, Electrical and Smart Installations" class="tab-img">
+                        </div>
+                        <div class="tab-text-card">
+                            <p class="tab-desc">
+                                <span class="text-short">Ensure smooth, safe, and modern operations with premium wiring and pipe installations. We integrate modern smart home controls, automated lighting, secure CCTV systems, and premium bath fittings...</span>
+                                <span class="text-full" style="display: none;"> We use fire-retardant copper wiring, high-grade conduits, and durable plumbing pipes to prevent future leaks or circuit overloads. Our smart home integration lets you control lighting, gates, and security devices seamlessly via smartphone.</span>
+                            </p>
+                            <a href="#" class="tab-link read-more-toggle">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Tab 4: Exterior Work -->
+                    <div class="tab-content" id="exterior-work">
+                        <div class="tab-image-box">
+                            <img src="assests/images/project4.png" alt="Exterior Work and Landscaping" class="tab-img">
+                        </div>
+                        <div class="tab-text-card">
+                            <p class="tab-desc">
+                                <span class="text-short">Enhance your property's curb appeal with stunning front elevation features, high-durability cladding, weather-resistant paint, gates, outdoor lighting, and landscape designs...</span>
+                                <span class="text-full" style="display: none;"> We combine natural elements with modern architecture to create beautiful driveways, garden areas, and perimeter walls. We select weather-durable elevation tiles, facade texturing, and custom structural steel gates to give your home a premium look.</span>
+                            </p>
+                            <a href="#" class="tab-link read-more-toggle">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Tab 5: Maintenance & Repairs -->
+                    <div class="tab-content" id="maintenance-repairs">
+                        <div class="tab-image-box">
+                            <img src="assests/images/project5.png" alt="Home Maintenance and Repairs" class="tab-img">
+                        </div>
+                        <div class="tab-text-card">
+                            <p class="tab-desc">
+                                <span class="text-short">Keep your residence in pristine condition with our prompt and efficient repair services. We fix structural cracks, handle roof waterproofing, repair electrical faults, and restore woodwork...</span>
+                                <span class="text-full" style="display: none;"> Our maintenance team responds quickly to resolve plumbing blockages, dampness/seepage issues, ceiling paint peeling, and lock or hardware problems. We provide itemized quotations and high-quality parts to guarantee durable, long-term repairs.</span>
+                            </p>
+                            <a href="#" class="tab-link read-more-toggle">Read More <i class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="comparison-section">
+        <div class="container">
+            <div class="comparison-header">
+                <h2 class="comparison-main-title">BRIGHT BUILDCON VS. INEXPERIENCED CONTRACTORS</h2>
+                <p class="comparison-subtitle">Not All Services For Residential Design & Construction In Bihar Are Equally Competent. Here Bright Buildcon Beats The Competition:</p>
+            </div>
+            
+            <div class="comparison-grid">
+                <!-- Left: Positive comparison column -->
+                <div class="comparison-col comparison-positive">
+                    <div class="col-header-bar">
+                        <h3>Why We Stand Out</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>
+                            <strong>Comprehensive 3D Modeling</strong>
+                            <p>Visualize before we build.</p>
+                        </li>
+                        <li>
+                            <strong>Transparent Pricing</strong>
+                            <p>No hidden costs, no surprises.</p>
+                        </li>
+                        <li>
+                            <strong>Custom Designs</strong>
+                            <p>Tailored solutions for every budget and style.</p>
+                        </li>
+                        <li>
+                            <strong>Experienced Residential Contractors</strong>
+                            <p>Decades of expertise in Bihar.</p>
+                        </li>
+                        <li>
+                            <strong>One-Stop Solution</strong>
+                            <p>From design to execution, we handle everything.</p>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Middle: Center portrait column -->
+                <div class="comparison-col comparison-center-image">
+                    <img src="assests/images/comparison_center_portrait.png" alt="Bright Buildcon Professional Expert" class="center-portrait-img">
+                </div>
+                
+                <!-- Right: Negative comparison column -->
+                <div class="comparison-col comparison-negative">
+                    <div class="col-header-bar">
+                        <h3>Common Issues with Naive Contractors</h3>
+                    </div>
+                    <ul class="comparison-list">
+                        <li>
+                            <strong>Lack of 3D Visualization</strong>
+                            <p>Uncertainty in final outcomes.</p>
+                        </li>
+                        <li>
+                            <strong>Hidden Costs & Delays</strong>
+                            <p>Budgets spiraling out of control.</p>
+                        </li>
+                        <li>
+                            <strong>Generic Designs</strong>
+                            <p>No personalization in residential projects.</p>
+                        </li>
+                        <li>
+                            <strong>Unskilled Labor</strong>
+                            <p>Leading to poor craftsmanship.</p>
+                        </li>
+                        <li>
+                            <strong>Fragmented Services</strong>
+                            <p>Need to coordinate with multiple vendors.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner Section -->
+    <section class="cta-banner-section">
+        <div class="cta-banner-overlay"></div>
+        <div class="container">
+            <div class="cta-banner-content">
+                <h2 class="cta-banner-title">Whether You Dream Of A Custom Villa, A Modern Apartment, Or A Complete Home Construction & Interior</h2>
+                <p class="cta-banner-desc">Bright Buildcon, we ensure your home remains functional, cozy, and sturdy. We blend creativity with practicality to create homes that are not just beautiful but also functional.</p>
+                <div class="cta-banner-btn-wrapper">
+                    <a href="tel:+916283856760" class="btn-cta-phone">
+                        <i class="fa-solid fa-phone"></i> +91 6283856760
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise Ticker Section -->
     <section class="expertise-section">
         <div class="container">
             <div class="expertise-header">
@@ -184,281 +399,7 @@
         </div>
     </section>
 
-    <section class="consultation-section">
-        <div class="container">
-            <form class="consultation-form" id="consultationForm" novalidate>
-                <h2 class="form-title">Request A free Consultation</h2>
-                <div class="form-grid-layout">
-                    <div class="form-field">
-                        <label for="fullName">Full Name</label>
-                        <input type="text" id="fullName" placeholder="Your Name">
-                        <span class="error-msg" id="nameError"></span>
-                    </div>
-                    <div class="form-field">
-                        <label for="emailAddress">Email</label>
-                        <input type="email" id="emailAddress" placeholder="Your Email">
-                        <span class="error-msg" id="emailError"></span>
-                    </div>
-                    <div class="form-field">
-                        <label for="phoneNumber">Phone</label>
-                        <input type="tel" id="phoneNumber" placeholder="Your Number">
-                        <span class="error-msg" id="phoneError"></span>
-                    </div>
-                    <div class="form-field">
-                        <label for="messageText">Message</label>
-                        <input type="text" id="messageText" placeholder="Additional message">
-                    </div>
-                </div>
-                <div class="form-submit-field">
-                    <button type="submit" class="btn-submit">Submit Now</button>
-                </div>
-            </form>
-        </div>
-    </section>
-
-    <section class="about-section" id="about-us">
-        <div class="container">
-            <div class="about-grid-layout">
-                <div class="about-video-column">
-                    <div class="about-poster-frame">
-                        <video autoplay loop muted playsinline class="about-inner-video">
-                            <source src="assests/videos/aboutus.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-                <div class="about-content-column">
-                    <div class="about-text-wrapper">
-                        <h2 class="about-main-title">About <span class="brand-highlight">Bright Buildcon</span></h2>
-                        <p class="about-description">
-                            At Bright Buildcon, we redefine spaces through cutting-edge construction and bespoke design.
-                            Specializing in residential, commercial, and industrial projects, we deliver custom
-                            solutions
-                            that consistently surpass expectations. Our commitment to innovation and quality ensures
-                            every
-                            project reflects our client's unique vision and our unwavering standards.
-                        </p>
-                        <div class="founder-profile-meta">
-                            <div class="founder-avatar-box">
-                                <img src="assests/images/nasim-siddique.png" alt="Nasim Siddique - Founder & CEO"
-                                    class="founder-img">
-                            </div>
-                            <div class="founder-info-box">
-                                <h3 class="founder-name">Nasim Siddique</h3>
-                                <p class="founder-title">Founder & CEO</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services-section" id="our-services">
-        <div class="services-outer-wrapper">
-            <div class="services-header-block">
-                <h2 class="services-main-heading">What We Offer</h2>
-                <div class="services-sub-heading-wrap">
-                    <p class="services-sub-heading">Full-Service Solutions for Residential, Commercial & Industrial
-                        Spaces</p>
-                </div>
-            </div>
-
-            <div class="services-grid-container">
-                <div class="service-card" id="service-commercial">
-                    <div class="card-text-side">
-                        <h3 class="card-title">Commercial Spaces</h3>
-                        <p class="card-paragraph">Elevate your business with our expertly designed commercial kitchens,
-                            blending durability with sophisticated style for lasting impressions.</p>
-                    </div>
-                    <div class="card-image-side">
-                        <img src="assests/images/commercial.png" alt="Commercial Spaces Layout" class="card-img">
-                    </div>
-                </div>
-
-                <div class="service-card" id="service-residential">
-                    <div class="card-text-side">
-                        <h3 class="card-title">Residential</h3>
-                        <p class="card-paragraph">Transform your living space with our custom furniture, where comfort
-                            meets elegance, creating a sanctuary you'll love.</p>
-                    </div>
-                    <div class="card-image-side">
-                        <img src="assests/images/residential.png" alt="Residential Master Plan" class="card-img">
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="card-text-side">
-                        <h3 class="card-title">Exteriors</h3>
-                        <p class="card-paragraph">Create stunning outdoor spaces with our landscape designs, blending
-                            nature and architecture for serene, stylish environments.</p>
-                    </div>
-                    <div class="card-image-side">
-                        <img src="assests/images/exteriors.png" alt="Exteriors Elevation Design" class="card-img">
-                    </div>
-                </div>
-
-                <div class="service-card" id="service-interior">
-                    <div class="card-text-side">
-                        <h3 class="card-title">Interior Design</h3>
-                        <p class="card-paragraph">Discover innovative interior solutions tailored to your vision,
-                            enhancing functionality and aesthetics for unforgettable spaces.</p>
-                    </div>
-                    <div class="card-image-side">
-                        <video autoplay loop muted playsinline class="card-img">
-                            <source src="assests/videos/expertise3.mp4" type="video/mp4">
-                        </video>
-                    </div>
-                </div>
-
-                <div class="service-card">
-                    <div class="card-text-side">
-                        <h3 class="card-title">Construction</h3>
-                        <p class="card-paragraph">Build your dream with our expert construction services, delivering
-                            quality craftsmanship and innovative solutions for lasting value.</p>
-                    </div>
-                    <div class="card-image-side">
-                        <img src="assests/images/construction.png" alt="Construction Structural Work" class="card-img">
-                    </div>
-                </div>
-
-                <div class="service-card" id="service-renovations">
-                    <div class="card-text-side">
-                        <h3 class="card-title">Renovations</h3>
-                        <p class="card-paragraph">Revitalize your property with our renovation expertise, blending
-                            modern design with timeless appeal for refreshed, vibrant spaces.</p>
-                    </div>
-                    <div class="card-image-side">
-                        <img src="assests/images/renovation.png" alt="Renovations Architecture In Action"
-                            class="card-img">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="trust-section">
-        <div class="container">
-            <div class="trust-outer-wrapper">
-                <div class="trust-content-block">
-                    <div class="trust-header-block">
-                        <span class="trust-tagline">WHY CHOOSE BRIGHT BUILDCON?</span>
-                        <h2 class="trust-main-heading">Why Our Clients Trust Bright Buildcon</h2>
-                    </div>
-                    <p class="trust-sub-heading">Transparent Pricing & Timely Delivery</p>
-
-                    <div class="trust-features-list">
-                        <div class="trust-feature-item">
-                            <div class="feature-icon-box">
-                                <i class="fa-regular fa-thumbs-up"></i>
-                            </div>
-                            <div class="feature-text-box">
-                                <h3>Decades of Construction & Design Experience</h3>
-                                <p>Custom Designs & Tailored Solutions</p>
-                            </div>
-                        </div>
-                        <div class="trust-feature-item">
-                            <div class="feature-icon-box">
-                                <i class="fa-regular fa-thumbs-up"></i>
-                            </div>
-                            <div class="feature-text-box">
-                                <h3>Custom Designs & Personalized Service</h3>
-                                <p>Transparent Pricing & On-Time Delivery</p>
-                            </div>
-                        </div>
-                        <div class="trust-feature-item">
-                            <div class="feature-icon-box">
-                                <i class="fa-regular fa-thumbs-up"></i>
-                            </div>
-                            <div class="feature-text-box">
-                                <h3>Superior Quality & Premium Materials</h3>
-                                <p>Transparent Pricing & Reliable Service</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="trust-image-card-side">
-                    <div class="image-card-container">
-                        <img src="assests/images/whywechoose.png" alt="Bright Buildcon Portfolio Layout"
-                            class="flat-combo-card">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="achievements-section">
-        <div class="achievements-container">
-            <div class="achievements-header-row">
-                <div class="achievements-title-block">
-                    <span class="achievements-tagline">Our Achievements</span>
-                    <h2 class="achievements-heading" id="typingHeading"></h2>
-                </div>
-                <div class="achievements-desc-block">
-                    <p class="achievements-description">
-                        We excel in residential, commercial, interior, exterior, and construction projects, delivering
-                        exceptional results that exceed expectations.
-                    </p>
-                </div>
-            </div>
-
-            <div class="achievements-stats-grid">
-                <div class="stat-card">
-                    <span class="stat-number counter" data-target="300">0+</span>
-                    <span class="stat-label">Residential projects</span>
-                </div>
-
-                <div class="stat-card">
-                    <span class="stat-number counter" data-target="50">0+</span>
-                    <span class="stat-label">Commercial projects</span>
-                </div>
-
-                <div class="stat-card">
-                    <span class="stat-number counter" data-target="200">0+</span>
-                    <span class="stat-label">Interior works</span>
-                </div>
-
-                <div class="stat-card">
-                    <span class="stat-number counter" data-target="100">0+</span>
-                    <span class="stat-label">Exterior works</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="design-projects-section">
-        <div class="projects-outer-wrapper">
-
-            <div class="projects-header-block">
-                <span class="projects-tagline">Interior & Exterior Design Projects</span>
-                <h2 class="projects-main-title">Upgrade Workspaces For Productivity</h2>
-                <p class="projects-subtitle">Explore Our Unique Interior & Exterior Design Solutions Customized For Your
-                    Style.</p>
-            </div>
-
-            <div class="projects-gallery-grid">
-                <div class="project-image-card">
-                    <img src="assests/images/project1.png" alt="Interior Workspace Preview 1" class="project-thumb">
-                </div>
-                <div class="project-image-card">
-                    <img src="assests/images/project2.png" alt="Luxury Interior Preview 2" class="project-thumb">
-                </div>
-                <div class="project-image-card">
-                    <img src="assests/images/project3.png" alt="Commercial Exterior Preview 3" class="project-thumb">
-                </div>
-                <div class="project-image-card">
-                    <img src="assests/images/project4.png" alt="Commercial Complex Preview 4" class="project-thumb">
-                </div>
-                <div class="project-image-card">
-                    <img src="assests/images/project5.png" alt="Residential Elevation Preview 5" class="project-thumb">
-                </div>
-                <div class="project-image-card">
-                    <img src="assests/images/project6.png" alt="Modern Building Preview 6" class="project-thumb">
-                </div>
-            </div>
-
-        </div>
-    </section>
+    <!-- Why Our Clients Trust Us Testimonial Section -->
     <section class="trust-slider-section">
         <div class="container">
             <div class="trust-header">
@@ -552,14 +493,15 @@
         </div>
     </section>
 
+
     <!-- New Section 1: Professional Certified Teams / Consultation Form -->
     <section class="certified-teams-section">
         <div class="container">
             <div class="certified-teams-grid">
                 <div class="certified-teams-info">
                     <h2 class="certified-teams-heading">Projects Are Handled By Professional Certified Teams</h2>
-                    <p class="certified-teams-subtext">Collaborative interior design flourishes with diverse ideas. When
-                        team members unite, their unique styles create innovative and functional spaces.</p>
+                    <p class="certified-teams-subtext">Collaborative construction and interior design flourishes with diverse ideas. When
+                        team members unite, their unique skills create innovative and functional spaces.</p>
                 </div>
                 <div class="certified-teams-form-wrapper">
                     <div class="certified-teams-card">
@@ -624,7 +566,7 @@
                 <!-- Left: Branding, social, etc. -->
                 <div class="footer-brand-column">
                     <img src="assests/images/Logo.png" alt="Bright Buildcon Logo" class="footer-logo">
-                    <p class="footer-about-text">© 2025 Bright Buildcon Interior. All rights reserved.<br>Follow
+                    <p class="footer-about-text">© 2025 Bright Buildcon Residential. All rights reserved.<br>Follow
                         Nasimuddin Siddique on Instagram for daily updates →</p>
                     <div class="footer-social-links">
                         <a href="https://www.instagram.com/brightbuildconofficial?utm_source=ig_web_button_share_sheet&igsh=ZXQzcW83Y2NnbHpw"
@@ -670,7 +612,6 @@
                 </div>
             </div>
 
-
             <!-- Bottom: Sub-footer Copyright -->
             <div class="footer-bottom-bar">
                 <p class="sub-footer-text">@ Copyright 2025 <a href="https://dotcomdotin.com/" target="_blank"
@@ -683,7 +624,6 @@
         const menuToggle = document.getElementById('menuToggle');
         const navMenu = document.getElementById('navMenu');
         const mobileOverlay = document.getElementById('mobileOverlay');
-        const expertiseTicker = document.getElementById('expertiseTicker');
 
         function toggleMenu() {
             const isActive = menuToggle.classList.toggle('active');
@@ -702,17 +642,12 @@
         mobileOverlay.addEventListener('click', toggleMenu);
 
         document.querySelectorAll('.nav-link').forEach(link => {
-            console.log('Attaching click listener to nav-link:', link.textContent.trim(), link.className);
             link.addEventListener('click', (e) => {
-                console.log('nav-link clicked:', link.textContent.trim(), link.className);
                 if (link.classList.contains('dropdown-toggle')) {
                     e.preventDefault();
                     e.stopPropagation();
                     if (window.innerWidth < 1025) {
-                        const item = link.closest('.dropdown-item');
-                        console.log('Toggling active class on dropdown-item, current classes:', item.className);
-                        item.classList.toggle('active');
-                        console.log('New dropdown-item classes:', item.className);
+                        link.closest('.dropdown-item').classList.toggle('active');
                     }
                     return;
                 }
@@ -724,10 +659,8 @@
 
         // Close dropdown when clicking outside of it
         document.addEventListener('click', (e) => {
-            console.log('document clicked, target:', e.target);
             const dropdown = document.querySelector('.dropdown-item');
             if (dropdown && !dropdown.contains(e.target)) {
-                console.log('Click outside dropdown detected, removing active class from:', dropdown);
                 dropdown.classList.remove('active');
             }
         });
@@ -743,7 +676,237 @@
             });
         });
 
-        // Setup draggable sliders for Expertise Ticker and Trust Slider
+        /* ==========================================
+           CONSULTATION FORM VALIDATION LOGIC
+           ========================================== */
+        document.getElementById('consultationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('fullName');
+            const email = document.getElementById('emailAddress');
+            const phone = document.getElementById('phoneNumber');
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const phoneError = document.getElementById('phoneError');
+            let isValid = true;
+
+            name.classList.remove('invalid-input');
+            email.classList.remove('invalid-input');
+            phone.classList.remove('invalid-input');
+            nameError.textContent = '';
+            emailError.textContent = '';
+            phoneError.textContent = '';
+
+            if (!name.value.trim()) {
+                name.classList.add('invalid-input');
+                nameError.textContent = 'Name is required';
+                isValid = false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim()) {
+                email.classList.add('invalid-input');
+                emailError.textContent = 'Email is required';
+                isValid = false;
+            } else if (!emailRegex.test(email.value)) {
+                email.classList.add('invalid-input');
+                emailError.textContent = 'Please enter a valid email';
+                isValid = false;
+            }
+
+            const cleanPhone = phone.value.replace(/[^0-9]/g, '');
+            if (!phone.value.trim()) {
+                phone.classList.add('invalid-input');
+                phoneError.textContent = 'Phone number is required';
+                isValid = false;
+            } else if (cleanPhone.length < 7 || cleanPhone.length > 15) {
+                phone.classList.add('invalid-input');
+                phoneError.textContent = 'Please enter a valid phone number';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Form submitted successfully!');
+                this.reset();
+            }
+        });
+
+        const monitoredInputs = [document.getElementById('fullName'), document.getElementById('emailAddress'), document.getElementById('phoneNumber')];
+        monitoredInputs.forEach(field => {
+            field.addEventListener('input', function () {
+                this.classList.remove('invalid-input');
+                const nextMessageNode = this.nextElementSibling;
+                if (nextMessageNode && nextMessageNode.classList.contains('error-msg')) {
+                    nextMessageNode.textContent = '';
+                }
+            });
+        });
+
+        /* ==========================================
+           CERTIFIED TEAMS FORM VALIDATION LOGIC
+           ========================================== */
+        document.getElementById('certifiedConsultationForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const name = document.getElementById('certFullName');
+            const email = document.getElementById('certEmailAddress');
+            const phone = document.getElementById('certPhoneNumber');
+            const address = document.getElementById('certAddress');
+
+            const nameError = document.getElementById('certNameError');
+            const emailError = document.getElementById('certEmailError');
+            const phoneError = document.getElementById('certPhoneError');
+            const addressError = document.getElementById('certAddressError');
+
+            let isValid = true;
+
+            name.classList.remove('invalid-input');
+            email.classList.remove('invalid-input');
+            phone.classList.remove('invalid-input');
+            address.classList.remove('invalid-input');
+
+            nameError.textContent = '';
+            emailError.textContent = '';
+            phoneError.textContent = '';
+            addressError.textContent = '';
+
+            if (!name.value.trim()) {
+                name.classList.add('invalid-input');
+                nameError.textContent = 'Name is required';
+                isValid = false;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim()) {
+                email.classList.add('invalid-input');
+                emailError.textContent = 'Email is required';
+                isValid = false;
+            } else if (!emailRegex.test(email.value)) {
+                email.classList.add('invalid-input');
+                emailError.textContent = 'Please enter a valid email';
+                isValid = false;
+            }
+
+            const cleanPhone = phone.value.replace(/[^0-9]/g, '');
+            if (!phone.value.trim()) {
+                phone.classList.add('invalid-input');
+                phoneError.textContent = 'Phone number is required';
+                isValid = false;
+            } else if (cleanPhone.length < 7 || cleanPhone.length > 15) {
+                phone.classList.add('invalid-input');
+                phoneError.textContent = 'Please enter a valid phone number';
+                isValid = false;
+            }
+
+            if (!address.value.trim()) {
+                address.classList.add('invalid-input');
+                addressError.textContent = 'Address is required';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Consultation request submitted successfully!');
+                this.reset();
+            }
+        });
+
+        const certInputs = [
+            document.getElementById('certFullName'),
+            document.getElementById('certEmailAddress'),
+            document.getElementById('certPhoneNumber'),
+            document.getElementById('certAddress')
+        ];
+        certInputs.forEach(field => {
+            field.addEventListener('input', function () {
+                this.classList.remove('invalid-input');
+                const nextMessageNode = this.nextElementSibling;
+                if (nextMessageNode && nextMessageNode.classList.contains('error-msg')) {
+                    nextMessageNode.textContent = '';
+                }
+            });
+        });
+
+        /* ==========================================
+           NEWSLETTER FORM VALIDATION LOGIC
+           ========================================== */
+        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const email = document.getElementById('newsEmailAddress');
+            const emailError = document.getElementById('newsEmailError');
+            let isValid = true;
+
+            email.classList.remove('invalid-input');
+            emailError.textContent = '';
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email.value.trim()) {
+                email.classList.add('invalid-input');
+                emailError.textContent = 'Email is required';
+                isValid = false;
+            } else if (!emailRegex.test(email.value)) {
+                email.classList.add('invalid-input');
+                emailError.textContent = 'Please enter a valid email';
+                isValid = false;
+            }
+
+            if (isValid) {
+                alert('Subscribed successfully!');
+                this.reset();
+            }
+        });
+
+        document.getElementById('newsEmailAddress').addEventListener('input', function () {
+            this.classList.remove('invalid-input');
+            const errorSpan = document.getElementById('newsEmailError');
+            if (errorSpan) {
+                errorSpan.textContent = '';
+            }
+        });
+
+        /* ==========================================
+           END-TO-END SERVICES TABS LOGIC
+           ========================================== */
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.getAttribute('data-tab');
+                
+                // Deactivate current active tab button & content
+                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Reset any active Read More text expansions on other tabs
+                document.querySelectorAll('.text-full').forEach(t => t.style.display = 'none');
+                document.querySelectorAll('.read-more-toggle').forEach(t => {
+                    t.innerHTML = 'Read More <i class="fa-solid fa-arrow-right"></i>';
+                });
+
+                // Activate clicked tab button & corresponding content
+                btn.classList.add('active');
+                const targetContent = document.getElementById(tabId);
+                if (targetContent) {
+                    targetContent.classList.add('active');
+                }
+            });
+        });
+
+        /* ==========================================
+           READ MORE TOGGLE LOGIC
+           ========================================== */
+        document.querySelectorAll('.read-more-toggle').forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const card = toggle.closest('.tab-text-card');
+                const fullText = card.querySelector('.text-full');
+                
+                if (fullText.style.display === 'none' || !fullText.style.display) {
+                    fullText.style.display = 'inline';
+                    toggle.innerHTML = 'Read Less <i class="fa-solid fa-arrow-up"></i>';
+                } else {
+                    fullText.style.display = 'none';
+                    toggle.innerHTML = 'Read More <i class="fa-solid fa-arrow-right"></i>';
+                }
+            });
+        });
+
+        // Setup draggable sliders for Expertise Ticker
         function makeTickerDraggable(container, track, durationMs) {
             if (!container || !track) return;
 
@@ -852,268 +1015,19 @@
             }, true);
         }
 
-        // Initialize drag-to-scroll on both tickers
+        // Initialize drag-to-scroll on Expertise ticker
         makeTickerDraggable(
             document.getElementById('expertiseTicker'), 
             document.querySelector('#expertiseTicker .expertise-ticker-track'),
             30000
         );
-        
+
+        // Initialize drag-to-scroll on Trust slider
         makeTickerDraggable(
             document.querySelector('.trust-slider-container'),
             document.querySelector('.trust-slider-container .trust-slider-track'),
             35000
         );
-
-        document.getElementById('consultationForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = document.getElementById('fullName');
-            const email = document.getElementById('emailAddress');
-            const phone = document.getElementById('phoneNumber');
-            const nameError = document.getElementById('nameError');
-            const emailError = document.getElementById('emailError');
-            const phoneError = document.getElementById('phoneError');
-            let isValid = true;
-
-            name.classList.remove('invalid-input');
-            email.classList.remove('invalid-input');
-            phone.classList.remove('invalid-input');
-            nameError.textContent = '';
-            emailError.textContent = '';
-            phoneError.textContent = '';
-
-            if (!name.value.trim()) {
-                name.classList.add('invalid-input');
-                nameError.textContent = 'Name is required';
-                isValid = false;
-            }
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.value.trim()) {
-                email.classList.add('invalid-input');
-                emailError.textContent = 'Email is required';
-                isValid = false;
-            } else if (!emailRegex.test(email.value)) {
-                email.classList.add('invalid-input');
-                emailError.textContent = 'Please enter a valid email';
-                isValid = false;
-            }
-
-            const cleanPhone = phone.value.replace(/[^0-9]/g, '');
-            if (!phone.value.trim()) {
-                phone.classList.add('invalid-input');
-                phoneError.textContent = 'Phone number is required';
-                isValid = false;
-            } else if (cleanPhone.length < 7 || cleanPhone.length > 15) {
-                phone.classList.add('invalid-input');
-                phoneError.textContent = 'Please enter a valid phone number';
-                isValid = false;
-            }
-
-            if (isValid) {
-                alert('Form submitted successfully!');
-                this.reset();
-            }
-        });
-
-        const monitoredInputs = [document.getElementById('fullName'), document.getElementById('emailAddress'), document.getElementById('phoneNumber')];
-        monitoredInputs.forEach(field => {
-            field.addEventListener('input', function () {
-                this.classList.remove('invalid-input');
-                const nextMessageNode = this.nextElementSibling;
-                if (nextMessageNode && nextMessageNode.classList.contains('error-msg')) {
-                    nextMessageNode.textContent = '';
-                }
-            });
-        });
-
-        /* ==========================================
-           NEW SECTIONS VALIDATION LOGIC
-           ========================================== */
-        document.getElementById('certifiedConsultationForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const name = document.getElementById('certFullName');
-            const email = document.getElementById('certEmailAddress');
-            const phone = document.getElementById('certPhoneNumber');
-            const address = document.getElementById('certAddress');
-
-            const nameError = document.getElementById('certNameError');
-            const emailError = document.getElementById('certEmailError');
-            const phoneError = document.getElementById('certPhoneError');
-            const addressError = document.getElementById('certAddressError');
-
-            let isValid = true;
-
-            name.classList.remove('invalid-input');
-            email.classList.remove('invalid-input');
-            phone.classList.remove('invalid-input');
-            address.classList.remove('invalid-input');
-
-            nameError.textContent = '';
-            emailError.textContent = '';
-            phoneError.textContent = '';
-            addressError.textContent = '';
-
-            if (!name.value.trim()) {
-                name.classList.add('invalid-input');
-                nameError.textContent = 'Name is required';
-                isValid = false;
-            }
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.value.trim()) {
-                email.classList.add('invalid-input');
-                emailError.textContent = 'Email is required';
-                isValid = false;
-            } else if (!emailRegex.test(email.value)) {
-                email.classList.add('invalid-input');
-                emailError.textContent = 'Please enter a valid email';
-                isValid = false;
-            }
-
-            const cleanPhone = phone.value.replace(/[^0-9]/g, '');
-            if (!phone.value.trim()) {
-                phone.classList.add('invalid-input');
-                phoneError.textContent = 'Phone number is required';
-                isValid = false;
-            } else if (cleanPhone.length < 7 || cleanPhone.length > 15) {
-                phone.classList.add('invalid-input');
-                phoneError.textContent = 'Please enter a valid phone number';
-                isValid = false;
-            }
-
-            if (!address.value.trim()) {
-                address.classList.add('invalid-input');
-                addressError.textContent = 'Address is required';
-                isValid = false;
-            }
-
-            if (isValid) {
-                alert('Consultation request submitted successfully!');
-                this.reset();
-            }
-        });
-
-        const certInputs = [
-            document.getElementById('certFullName'),
-            document.getElementById('certEmailAddress'),
-            document.getElementById('certPhoneNumber'),
-            document.getElementById('certAddress')
-        ];
-        certInputs.forEach(field => {
-            field.addEventListener('input', function () {
-                this.classList.remove('invalid-input');
-                const nextMessageNode = this.nextElementSibling;
-                if (nextMessageNode && nextMessageNode.classList.contains('error-msg')) {
-                    nextMessageNode.textContent = '';
-                }
-            });
-        });
-
-        document.getElementById('newsletterForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-            const email = document.getElementById('newsEmailAddress');
-            const emailError = document.getElementById('newsEmailError');
-            let isValid = true;
-
-            email.classList.remove('invalid-input');
-            emailError.textContent = '';
-
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!email.value.trim()) {
-                email.classList.add('invalid-input');
-                emailError.textContent = 'Email is required';
-                isValid = false;
-            } else if (!emailRegex.test(email.value)) {
-                email.classList.add('invalid-input');
-                emailError.textContent = 'Please enter a valid email';
-                isValid = false;
-            }
-
-            if (isValid) {
-                alert('Subscribed successfully!');
-                this.reset();
-            }
-        });
-
-        document.getElementById('newsEmailAddress').addEventListener('input', function () {
-            this.classList.remove('invalid-input');
-            const errorSpan = document.getElementById('newsEmailError');
-            if (errorSpan) {
-                errorSpan.textContent = '';
-            }
-        });
-
-        /* ==========================================
-           ACHIEVEMENTS TYPEWRITER + COUNTER LOGIC
-           ========================================== */
-        let isAnimating = false;
-        let typingTimeout;
-
-        const achievementsHeading = document.getElementById("typingHeading");
-        const achievementsSection = document.querySelector(".achievements-section");
-        const counters = document.querySelectorAll(".counter");
-        const headingText = "Building Excellence, Shaping Dreams";
-
-        function animateCounter(counter) {
-            const target = parseInt(counter.dataset.target);
-            let current = 0;
-            const increment = Math.max(1, Math.ceil(target / 80));
-
-            function updateCounter() {
-                current += increment;
-                if (current >= target) {
-                    counter.textContent = target + "+";
-                    return;
-                }
-                counter.textContent = current + "+";
-                requestAnimationFrame(updateCounter);
-            }
-            updateCounter();
-        }
-
-        function startAchievementsAnimation() {
-            if (isAnimating) return;
-            isAnimating = true;
-
-            achievementsHeading.textContent = "";
-            achievementsHeading.classList.add("typing");
-
-            counters.forEach(counter => {
-                counter.textContent = "0+";
-            });
-
-            // Counters start immediately as requested
-            counters.forEach(counter => {
-                animateCounter(counter);
-            });
-
-            let i = 0;
-            function typeWriter() {
-                if (i < headingText.length) {
-                    achievementsHeading.textContent += headingText.charAt(i);
-                    i++;
-                    typingTimeout = setTimeout(typeWriter, 60);
-                } else {
-                    achievementsHeading.classList.remove("typing");
-                    isAnimating = false;
-                }
-            }
-            typeWriter();
-        }
-
-        const achievementsObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !isAnimating) {
-                        startAchievementsAnimation();
-                    }
-                });
-            },
-            { threshold: 0.6 }
-        );
-
-        achievementsObserver.observe(achievementsSection);
     </script>
 </body>
 
